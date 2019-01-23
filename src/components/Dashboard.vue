@@ -6,7 +6,6 @@
       </li>
       <li v-for="employee in employees" v-bind:key="employee.id" class="collection-item">
         <div class="chip">{{employee.dept}}</div>
-
         {{employee.employee_id}}:{{employee.name}}
         <router-link
           class="secondary-content"
