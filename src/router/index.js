@@ -22,7 +22,7 @@ let router = new Router({
       }
     },
     {
-      path: '/login',
+      path: '/Employee-Manager/login',
       name: 'login',
       component: Login,
       meta: {
@@ -30,7 +30,7 @@ let router = new Router({
       }
     },
     {
-      path: '/register',
+      path: '/Employee-Manager/register',
       name: 'register',
       component: Register,
       meta: {
@@ -38,7 +38,7 @@ let router = new Router({
       }
     },
     {
-      path: '/new',
+      path: '/Employee-Manager/new',
       name: 'new-employee',
       component: NewEmployee,
       meta: {
@@ -46,7 +46,7 @@ let router = new Router({
       }
     },
     {
-      path: '/edit/:employee_id',
+      path: '/Employee-Manager/edit/:employee_id',
       name: 'edit-employee',
       component: EditEmployee,
       meta: {
@@ -54,7 +54,7 @@ let router = new Router({
       }
     },
     {
-      path: '/:employee_id',
+      path: '/Employee-Manager/:employee_id',
       name: 'view-employee',
       component: ViewEmployee,
       meta: {
@@ -73,7 +73,7 @@ router.beforeEach((to, from, next) => {
     if (!firebase.auth().currentUser) {
       //Go to login
       next({
-        path: '/login',
+        path: '/Employee-Manager/login',
         query: {
           redirect: to.fullPath
         }
@@ -87,7 +87,7 @@ router.beforeEach((to, from, next) => {
     if (firebase.auth().currentUser) {
       //Go to login
       next({
-        path: '/',
+        path: '/Employee-Manager/',
         query: {
           redirect: to.fullPath
         }
