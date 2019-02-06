@@ -14,7 +14,7 @@ Vue.use(Router)
 let router = new Router({
   routes: [
     {
-      path: '/',
+      path: '/Employee-Manager/',
       name: 'dashboard',
       component: Dashboard,
       meta: {
